@@ -1,0 +1,44 @@
+// css deafault layout-header
+.layout-header {
+    min-height: 80px;
+
+    .row {
+        transform: translateY(50%);
+    }
+
+    // css layout-search
+    .layout-search {
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+
+        .layout-text {
+            width: 100%;
+            border-radius: 75%;
+            input[type="text"] {
+                width: 100%;
+                border-radius: 5px;
+                border: none;
+                background: #eaeaea none repeat scroll 0 0;
+                padding: 5px 50px 5px 10px;
+            }
+        }
+
+        .layout-submit {
+            position: absolute;
+            min-height: 100%;
+            padding-right: 15px;
+
+            .fa-search{
+                transform: translateY(50%);
+            }
+        }
+    }
+
+    // css menu 
+
+    .layout-menu{
+        display: flex;
+    }
+}
