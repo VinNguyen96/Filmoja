@@ -15,8 +15,7 @@
       </div>
 
       <div class="layout-menu col-lg-6">
-        <menu_home/>
-        <page/>
+        <HeaderMenu></HeaderMenu>
       </div>
     </div>
   </div>
@@ -24,14 +23,14 @@
 
 <script>
 import Logo from "@/components/layout/Logo.vue";
-
+import HeaderMenu from "@/components/layout/HeaderMenu.vue";
 
 export default {
-  name: "Header",
+  name: "Hearder",
 
   components: {
     Logo,
-    
+    HeaderMenu,
   },
 };
 </script>
