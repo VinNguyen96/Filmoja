@@ -1,0 +1,93 @@
+$text-White: white; //màu chữ slider-content
+$font-content: 'Orbitron', sans-serif;
+
+.slick-carousel {
+    // margin-top: -100px;
+    clip-path: polygon(0 12%, 0 77%, 50% 87%, 100% 78%, 100% 12%, 50% 12%);
+
+    .slick-slider {
+        .slick-prev {
+            // left: 0px;
+            z-index: 1;
+            // overflow: hidden;
+            
+          
+        }
+        .slick-prev:before{
+            content: url('@/assets/images/prev-1.png');
+            color: $text-White;
+
+        }
+       
+        .slick-next {
+            right: 61px;
+        }
+        .slick-next:before{
+            content: url('@/assets/images/next-1.png');
+            color: $text-White;
+            
+        }
+    }
+
+    .slider {
+        position: relative;
+
+
+        .slider-images {
+            filter: brightness(50%);
+            z-index: 1000;
+        }
+       
+        .slider-images:hover .slick-prev{
+            // @keyframes slickPrev {
+            //     0%   { transform: translateX(0); }
+            //     100%  { transform: translateX(100px); }  
+            // }
+            //     animation-name: slickPrev;
+            //     animation-timing-function: ease;
+            //     animation-duration: 2s;
+            //     animation-iteration-count: infinite;
+          z-index: -1;
+        }
+        .slider-content {
+            position: absolute;
+            top: 25%;
+            right: 50%;
+            transform: translate(50%, 50%);
+            color: $text-White;
+            font-family: $font-content;
+            text-align: center;
+
+            .slider-text {
+                padding-bottom: 20px;
+                h1 {
+                    font-size: 50px;
+                    font-weight: 500;
+                    text-shadow: 1px 1px 1px rgb(0 0 0 / 0%);
+                    letter-spacing: 3px;
+                    line-height: 60px;
+                    
+                }
+            }
+
+            .slider-watch {
+                // border: 1px solid orange;
+                // width: 100%;
+
+                .slider-watch__content{
+                    border: 1px solid orange;
+                    padding: 15px;
+                    border-radius: 50px;
+                    background-image: linear-gradient(to right, #fbbd61, #ec7532);
+                    a {
+                        color: $text-White;
+                        letter-spacing: 1px;
+                        width: 100%;
+                    }
+                }
+              
+            }
+        }
+    }
+
+}

@@ -1,7 +1,7 @@
 <template>
 
     <li class="nav-item nav-child">
-        <a href="#" class="nav-link">{{ data.text }}</a>
+        <nuxt-link to="#" class="nav-link">{{ data.text }}</nuxt-link>
         <ul class="nav">
 
             <HeaderMenuItem v-for="(item, index) in data.children" :key="'childItem' + index" :data="item">
@@ -23,7 +23,7 @@ import HeaderMenuItem from "@/components/layout/HeaderMenuItem.vue";
 export default {
     name: 'HeaderMenuItem',
 
-    comments: {
+    components: {
         HeaderMenuItem,
     },
 

@@ -1,8 +1,8 @@
 <template>
   <div>
-    <Header></Header>
+    <!-- <Header></Header> -->
 
-    <!-- <Slider></Slider> -->
+    <Slider></Slider>
 
   </div>
 </template>
@@ -16,9 +16,9 @@ export default {
 
   layout: "default",
 
-  comments:{
+  components:{
     Slider,
-  }
-    
+  },
+
 }
 </script>

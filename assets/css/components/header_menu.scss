@@ -1,5 +1,6 @@
 .header-menu {
-
+    position: relative;
+ 
     .nav {
 
         li.nav-item:hover {
@@ -12,14 +13,14 @@
         .nav-item {
 
             position: relative;
-
+           
             ul.nav {
                 position: absolute;
                 width: 135px;
                 background: #fff none repeat scroll 0 0;
                 box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.5);
                  display: none;
-
+                 
                 li.nav-item {
                     border-bottom: 1px solid gray;
                     width: 100%;
@@ -31,10 +32,12 @@
                     display: flex;
                     flex-direction: row;
                     width: 100%;
+                    
 
                     ul.nav {
                         position: absolute;
                         left: 100%;
+                       
                     }
 
                 }

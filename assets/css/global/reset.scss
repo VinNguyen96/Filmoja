@@ -1,3 +1,5 @@
+
+
 body{
     background-color: #fff;
     color: #727a93;
@@ -6,6 +8,12 @@ body{
     font-weight: 400;
     line-height: 26px;
     letter-spacing: 1px;
-    z-index: 0;
+    min-width: 100%;
+   
+}
+
+a, a:hover{
+    text-decoration: none;
+    // color: black;
 }
 

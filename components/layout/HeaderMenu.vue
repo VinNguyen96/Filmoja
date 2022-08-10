@@ -3,7 +3,8 @@
     <ul class="nav" >
 
       <li class="nav-item" v-for="(item, index) in menuPageList" :key="index">
-        <a href="#" class="nav-link">{{item.text}}</a>
+        <nuxt-link to="/abc" class="nav-link">{{item.text}}</nuxt-link>
+        
         <ul class="nav">
 
           <HeaderMenuItem v-for="(child,index) in item.children" :key="'child' + index" :data="child"></HeaderMenuItem>
@@ -39,7 +40,7 @@ import HeaderMenuItem from "./HeaderMenuItem.vue";
 export default {
   name: "HeaderMenu",
 
-  comments:{
+  components:{
     HeaderMenuItem,
   },
 
@@ -111,7 +112,20 @@ export default {
             {
               text: "Movie Grid",
               url: "/",
-              children: [],
+              children: [
+                {
+                  text: "Grid Sidebar",
+                  url:"/",
+                  children:[],
+                },
+
+                 {
+                  text: "Full Page Grid",
+                  url:"/",
+                  children:[],
+                },
+
+              ],
             },
 
             {

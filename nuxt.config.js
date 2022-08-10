@@ -17,6 +17,22 @@ export default {
         rel: 'stylesheet',
         href: 'https://use.fontawesome.com/releases/v5.2.0/css/all.css',
       },
+
+      {
+        rel:'stylesheet',
+        type:'text/css',
+        href: '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css',
+      },
+
+      {
+        type:'text/javascript',
+        href: '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js',
+      },
+
+      {
+        rel:'stylesheet',
+        href:'https://fonts.googleapis.com/css?family=Orbitron',
+      },
     ]
   },
 
