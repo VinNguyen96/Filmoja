@@ -1,7 +1,7 @@
 <template>
     <section class="Theater">
         <div class="container">
-            <div class="row watch-content " v-for="(item,index) in textArray" :key="text + index">
+            <div class="row watch-content " v-for="(item,index) in textArray" :key="index">
                 <div class="col-lg-5 watch-text">
                     <h1>{{item.h1}}</h1>
                     <p>{{item.p}}</p>
@@ -17,7 +17,7 @@
                     <div class="icon-youtube">
                        <nuxt-link to="#"><i class="fa fa-play" aria-hidden="true"></i> </nuxt-link> 
                     </div>
-                    <img :src=item.img alt="">
+                    <img :src="item.img" alt="">
                 </div>
             </div>
         </div>
