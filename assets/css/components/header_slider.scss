@@ -2,30 +2,110 @@ $text-White: white; //màu chữ slider-content
 $font-content: 'Orbitron', sans-serif;
 
 .slick-carousel {
-    // margin-top: -100px;
-    clip-path: polygon(0 12%, 0 77%, 50% 87%, 100% 78%, 100% 12%, 50% 12%);
+    margin-top: -80px;
+    clip-path: polygon(0 12%, 0 78%, 50% 87%, 100% 78%, 100% 12%, 50% 12%);
+    width: 100%;
+    overflow: hidden;
+
 
     .slick-slider {
+        .slick-active{
+
+            h6 {
+                @keyframes contentH6 {
+                    0% {
+                        transform: translateY(-100px);
+                    }
+
+                    100% {
+                        transform: translateY(0);
+                    }
+                }
+
+                animation-name: contentH6;
+                animation-fill-mode: forwards;
+                animation-duration: 1.5s;
+                animation-iteration-count: 1;
+                animation-delay: 1s;
+                opacity: 1 !important;
+            }
+
+            h1,p{
+                 @keyframes contentH1 {
+                    0% {
+                        transform: translateX(-100px);
+                    }
+
+                    100% {
+                        transform: translateX(0);
+                    }
+                }
+
+                animation-name: contentH1;
+                animation-fill-mode: forwards;
+                animation-duration: 1.5s;
+                animation-iteration-count: 1;
+                animation-delay: 1s;
+                opacity: 1 !important;
+
+            }
+
+            .slider-watch{
+                @keyframes contentSliderWatach {
+                    0% {
+                        transform: translateY(100px);
+                    }
+
+                    100% {
+                        transform: translateY(0);
+                    }
+                }
+
+                animation-name: contentSliderWatach;
+                animation-fill-mode: forwards;
+                animation-duration: 1.5s;
+                animation-iteration-count: 1;
+                animation-delay: 1s;
+                opacity: 1 !important;
+            }
+        }
         .slick-prev {
-            // left: 0px;
+            left: -61px;
             z-index: 1;
             // overflow: hidden;
-            
-          
+            width: 61px;
+           
+            top: 43%;
+            // right: 50%;
+            transform: translateY(50%);
+           
         }
-        .slick-prev:before{
+
+        .slick-prev:before {
             content: url('@/assets/images/prev-1.png');
             color: $text-White;
+            opacity: 1 !important;
 
         }
-       
+
         .slick-next {
-            right: 61px;
+            right: -61px;
+            // overflow: hidden;
+            width: 61px;
+            // display: none !important;
+            position: absolute;
+            top: 43%;
+            // right: 50%;
+            transform: translate(50%, 50%);
+
+
         }
-        .slick-next:before{
+
+        .slick-next:before {
             content: url('@/assets/images/next-1.png');
             color: $text-White;
-            
+            opacity: 1 !important;
+
         }
     }
 
@@ -34,21 +114,10 @@ $font-content: 'Orbitron', sans-serif;
 
 
         .slider-images {
-            filter: brightness(50%);
-            z-index: 1000;
+            filter: brightness(40%);
+            // z-index: 1000;
         }
-       
-        .slider-images:hover .slick-prev{
-            // @keyframes slickPrev {
-            //     0%   { transform: translateX(0); }
-            //     100%  { transform: translateX(100px); }  
-            // }
-            //     animation-name: slickPrev;
-            //     animation-timing-function: ease;
-            //     animation-duration: 2s;
-            //     animation-iteration-count: infinite;
-          z-index: -1;
-        }
+
         .slider-content {
             position: absolute;
             top: 25%;
@@ -60,34 +129,93 @@ $font-content: 'Orbitron', sans-serif;
 
             .slider-text {
                 padding-bottom: 20px;
+
                 h1 {
                     font-size: 50px;
                     font-weight: 500;
                     text-shadow: 1px 1px 1px rgb(0 0 0 / 0%);
                     letter-spacing: 3px;
                     line-height: 60px;
-                    
+                    opacity: 0;
+                    transform: translateX(-200px);
+                    width: 99%;
+                }
+
+                p {
+                    transform: translateX(-200px);
+                    opacity: 0;
+
+                }
+
+                h6 {
+                    transform: translateY(-100px);
+                    opacity: 0;
+
                 }
             }
 
             .slider-watch {
                 // border: 1px solid orange;
                 // width: 100%;
-
-                .slider-watch__content{
+                opacity: 0;
+                transform: translateY(100px);
+                .slider-watch__content {
                     border: 1px solid orange;
                     padding: 15px;
                     border-radius: 50px;
                     background-image: linear-gradient(to right, #fbbd61, #ec7532);
+
                     a {
                         color: $text-White;
                         letter-spacing: 1px;
                         width: 100%;
                     }
                 }
-              
+
             }
         }
+    }
+
+}
+
+.slick-carousel:hover {
+
+    .slick-prev {
+        // transform: translateX(25px) !important;
+        // transition: 2s;
+
+        @keyframes slickPrev {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(100px);
+            }
+        }
+
+        animation-name: slickPrev;
+        animation-fill-mode: forwards;
+        animation-duration: 0.5s;
+        animation-iteration-count: 1;
+    }
+
+    .slick-next {
+        @keyframes slickNext {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-100px);
+            }
+        }
+
+        animation-name: slickNext;
+        animation-fill-mode: forwards;
+        animation-duration: 0.5s;
+        animation-iteration-count: 1;
+        // display: block !important;
     }
 
 }

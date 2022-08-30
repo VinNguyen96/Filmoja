@@ -1,0 +1,115 @@
+$text-White: white; //màu chữ slider-content
+$font-content: 'Orbitron', sans-serif;
+$text-ec7532: #ec7532;
+
+.Theater {
+    position: relative;
+    margin-top: 50px;
+    z-index: 1;
+    background: #f9f9f9 none repeat scroll 0 0;
+    top: 0;
+    left: 0;
+    padding: 70px 0;
+
+    .watch-content {
+
+        .watch-text {
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+
+            h1 {
+                color: $text-White;
+                font-family: $font-content;
+            }
+
+            p {
+                color: $text-ec7532;
+                text-align: center;
+
+            }
+
+            h6 {
+                color: $text-White;
+
+            }
+
+            .discover {
+                margin-top: 30px;
+
+                .btn-discover {
+                    // border: 1px solid #ec7532;
+                    padding: 15px;
+                    border-radius: 40px;
+                    // font-family: $font-content;
+                    // font-size: 12px;
+                    letter-spacing: 2px;
+                    background-image: linear-gradient(to right, #fbbd61, #ec7532);
+                    color: $text-White;
+
+                }
+
+                .btn-discover:hover {
+                    background-image: linear-gradient(to right, #ec7532, #fbbd61);
+                }
+
+            }
+
+
+        }
+
+        .watch-video {
+            border: 5px solid #ec7532;
+            padding: 0;
+            border-radius: 5px;
+
+            .icon-youtube {
+                width: 60px;
+                position: absolute;
+                background-color: red;
+                border-radius: 10px;
+                height: 40px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                .fa {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    color: white;
+                }
+            }
+
+            img {
+                width: 100%;
+
+            }
+        }
+    }
+
+
+}
+
+
+
+.Theater::before {
+    position: absolute;
+    content: '';
+    max-height: 100%;
+    width: 65%;
+    background: #111 none repeat scroll 0 0;
+    opacity: 0.5;
+}
+
+.Theater::after {
+    position: absolute;
+    left: 0;
+    content: "";
+    width: 65%;
+    top: 0;
+    height: 100%;
+    background: url(@/assets/images/bgs1.jpg) no-repeat scroll 0 0/cover;
+    z-index: -1;
+}

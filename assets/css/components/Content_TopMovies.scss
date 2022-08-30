@@ -1,0 +1,191 @@
+$font-content: 'Orbitron', sans-serif;
+
+
+.top {
+
+    //  padding: 0px !important;
+    .top-movies {
+
+        .top-movies__text {
+
+            h2 {
+                position: relative;
+                padding-left: 15px;
+                font-family: $font-content;
+                font-weight: 500;
+                color: #111;
+
+                span {
+                    color: #ec7532;
+                }
+            }
+
+            h2::before {
+                content: '';
+                width: 4px;
+                height: 20px;
+                background: #ec7532;
+                position: absolute;
+                left: 7px;
+                bottom: 0;
+            }
+
+            h2::after {
+                content: "";
+                width: 4px;
+                height: 30px;
+                background: #111;
+                position: absolute;
+                left: 0px;
+                bottom: 0;
+
+
+
+            }
+        }
+
+        .btn-slick {
+            text-align: right;
+            padding-right: 32px;
+
+            button {
+                border: 1px solid #ddd;
+                width: 30px;
+                height: 30px;
+                margin: 0 3px;
+                color: #ec7532;
+            }
+        }
+    }
+
+
+    // css button slick
+
+    .slick-slider .slick-prev {}
+
+    .slick-prev:before {
+        color: #ec7532;
+
+    }
+
+    // .slick-prev:before,
+    // .slick-next:before {
+    //     color: #ec7532;
+
+    // }
+
+
+    .slider-top {
+        padding-right: 20px;
+
+        .top-img {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 0;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .wrap-top {
+            position: relative;
+
+            .top-img::before {
+                content: '';
+                position: absolute;
+                width: 150%;
+                background-image: linear-gradient(to right, #fbbd61, #ec7532);
+                height: 60%;
+                opacity: 0;
+                left: -25%;
+                top: -50%;
+                transform: skewY(25deg);
+                transition: all 400ms linear
+            }
+
+            .watch-video {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+                transition: all 300ms linear;
+
+                .btn-play {
+                    border: 2px solid white;
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+
+                    .fa {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        .wrap-top:hover {
+            .top-img::before {
+                height: 200%;
+                opacity: 0.95;
+
+            }
+
+            .watch-video{
+                opacity: 1;
+            }
+        }
+
+
+
+        .content-top {
+
+            p {
+                font-size: 18px;
+                color: #111;
+                transform: translateY(50%);
+            }
+
+            p:hover {
+                color: #ec7532;
+
+            }
+
+            .icon-top {
+                display: flex;
+                justify-content: space-between;
+
+                .icon-like {
+                    .fa {
+                        color: #ec7532;
+                    }
+                }
+
+                .icon-watching {
+                    .fa {
+                        color: #ec7532;
+                    }
+                }
+
+                .icon-evaluate {
+                    width: 60px;
+                    color: white;
+                    background-image: linear-gradient(to right, #fbbd61, #ec7532);
+                    border-radius: 5px;
+
+                    align-self: center;
+                    margin-right: 5px;
+                    text-align: center;
+
+                }
+            }
+
+
+        }
+    }
+}

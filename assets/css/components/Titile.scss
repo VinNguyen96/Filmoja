@@ -1,0 +1,37 @@
+.top-movies__text {
+
+    h2 {
+        position: relative;
+        padding-left: 15px;
+        font-family: $font-content;
+        font-weight: 500;
+        color: #111;
+
+        span {
+            color: #ec7532;
+        }
+    }
+
+    h2::before {
+        content: '';
+        width: 4px;
+        height: 20px;
+        background: #ec7532;
+        position: absolute;
+        left: 7px;
+        bottom: 0;
+    }
+
+    h2::after {
+        content: "";
+        width: 4px;
+        height: 30px;
+        background: #111;
+        position: absolute;
+        left: 0px;
+        bottom: 0;
+
+
+
+    }
+}
