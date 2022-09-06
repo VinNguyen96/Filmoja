@@ -35,6 +35,7 @@ export default {
 
       listMovie: [
         {
+          id: 1,
           img: require("../../assets/images/top-slider-1.jpeg"),
           name: "Draeing Joker",
           like: "256",
@@ -43,6 +44,7 @@ export default {
         },
 
         {
+          id: 2,
           img: require("../../assets/images/top-slider-2.jpeg"),
           name: "Draeing Joker",
           like: "256",
@@ -51,6 +53,7 @@ export default {
         },
 
         {
+          id: 3,
           img: require("../../assets/images/top-slider-3.jpeg"),
           name: "Draeing Joker",
           like: "256",
@@ -59,6 +62,7 @@ export default {
         },
 
         {
+          id: 4,
           img: require("../../assets/images/top-slider-4.jpg"),
           name: "Draeing Joker",
           like: "256",
@@ -67,6 +71,7 @@ export default {
         },
 
         {
+          id: 5,
           img: require("../../assets/images/top-slider-5.jpeg"),
           name: "Draeing Joker",
           like: "256",
@@ -75,6 +80,7 @@ export default {
         },
 
         {
+          id: 6,
           img: require("../../assets/images/top-slider-1.jpeg"),
           name: "Draeing Joker",
           like: "256",
@@ -83,6 +89,7 @@ export default {
         },
 
         {
+          id: 7,
           img: require("../../assets/images/top-slider-5.jpeg"),
           name: "Draeing Joker",
           like: "256",
@@ -91,6 +98,7 @@ export default {
         },
 
         {
+          id: 8,
           img: require("../../assets/images/top-slider-1.jpeg"),
           name: "Draeing Joker",
           like: "256",
