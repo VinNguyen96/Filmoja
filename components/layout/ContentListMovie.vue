@@ -1,44 +1,107 @@
 <template>
-  <div class="container">
-    <Title :title="abc"></Title>
+  <!-- <div class="container"> -->
 
-    <div class="content">
-      <div class="container menu-Content">
+    <!-- <div class="content"> -->
+      <!-- <div class="container menu-Content">
         <div>NEW RELEASES</div>
         <div>MOVIES</div>
         <div>TV SERIES</div>
         <div>CARTOONS</div>
+      </div> -->
+      
+      <div>
+        <ListMovieItem :list="listMovie"></ListMovieItem>
       </div>
-      <div class="row">
-        <div class="col-lg-3">a</div>
-        <div class="col-lg-3">b</div>
-        <div class="col-lg-3">c</div>
-        <div class="col-lg-3">d</div>
-      </div>
+  
 
-      <div class="row">
-        <div class="col-lg-3">a</div>
-        <div class="col-lg-3">b</div>
-        <div class="col-lg-3">c</div>
-        <div class="col-lg-3">d</div>
-      </div>
-    </div>
-  </div>
+    <!-- </div> -->
+  <!-- </div> -->
 </template>
 
 <script>
-import Title from "../../components/layout/Title.vue";
+import ListMovieItem from "@/components/movies/ListMovies.vue";
+
 
 export default {
   name: "ListMovie",
 
+  components: {
+    ListMovieItem,
+  },
+
   data() {
     return {
-      abc: "new style",
+     
+
+      listMovie: [
+        {
+          img: require("../../assets/images/top-slider-1.jpeg"),
+          name: "Draeing Joker",
+          like: "256",
+          watch: "45",
+          evaluate: "4.5",
+        },
+
+        {
+          img: require("../../assets/images/top-slider-2.jpeg"),
+          name: "Draeing Joker",
+          like: "256",
+          watch: "45",
+          evaluate: "4.5",
+        },
+
+        {
+          img: require("../../assets/images/top-slider-3.jpeg"),
+          name: "Draeing Joker",
+          like: "256",
+          watch: "45",
+          evaluate: "4.5",
+        },
+
+        {
+          img: require("../../assets/images/top-slider-4.jpg"),
+          name: "Draeing Joker",
+          like: "256",
+          watch: "45",
+          evaluate: "4.5",
+        },
+
+        {
+          img: require("../../assets/images/top-slider-5.jpeg"),
+          name: "Draeing Joker",
+          like: "256",
+          watch: "45",
+          evaluate: "4.5",
+        },
+
+        {
+          img: require("../../assets/images/top-slider-1.jpeg"),
+          name: "Draeing Joker",
+          like: "256",
+          watch: "45",
+          evaluate: "4.5",
+        },
+
+        {
+          img: require("../../assets/images/top-slider-5.jpeg"),
+          name: "Draeing Joker",
+          like: "256",
+          watch: "45",
+          evaluate: "4.5",
+        },
+
+        {
+          img: require("../../assets/images/top-slider-1.jpeg"),
+          name: "Draeing Joker",
+          like: "256",
+          watch: "45",
+          evaluate: "4.5",
+        },
+
+        
+      ],
     };
   },
-  components: {
-    Title,
-  },
+
 };
 </script>

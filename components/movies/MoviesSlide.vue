@@ -1,5 +1,21 @@
 <template>
   <div class="movie-slide">
+    <div class="row top-movies">
+      <div class="col-lg-6">
+        <Title :title="titleContentTop"></Title>
+      </div>
+
+      <div class="col-lg-6 btn-slick">
+        <div>
+          <button @click="Prev" type="button">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+          </button>
+          <button @click="showNext" type="button">
+            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </div>
     <VueSlickCarousel v-bind="settings" ref="carousel">
         <MovieCard
           v-for="(item, index) in list"
@@ -11,6 +27,8 @@
 </template>
 
 <script>
+import Title from "@/components/layout/Title.vue";
+
 // optional style for arrows & dots
 import "vue-slick-carousel/dist/vue-slick-carousel.css";
 import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
@@ -24,6 +42,7 @@ export default {
   components: {
     MovieCard,
     VueSlickCarousel,
+    Title,
   },
 
   props: {
@@ -35,6 +54,10 @@ export default {
 
   data() {
     return {
+      titleContentTop:{
+        name: "Top Movies :",
+        year : "2019",
+      },
       settings: {
         dots: false,
         infinite: true,

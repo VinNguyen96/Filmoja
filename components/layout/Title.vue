@@ -1,6 +1,6 @@
 <template>
        <div class="top-movies__text">
-                <h2>{{title}} <span>2019</span> </h2>
+                <h2>{{title.name}} <span>{{title.year}}</span> </h2>
         </div>
 </template>
 
@@ -11,23 +11,23 @@ export default {
     props:{
         title:{
             // 1.kieu du lieu
-            type: String,
+            type: Object,
             default: () => '',
             
         }
     },
 
-    data(){
-        return{
-            titleArray: [
-                {
-                    name: 'Top Movies',
-                    year: '2019',
-                },
+    // data(){
+    //     return{
+    //         titleArray: [
+    //             {
+    //                 name: 'Top Movies',
+    //                 year: '2019',
+    //             },
 
-            ]
-        }
-    }
+    //         ]
+    //     }
+    // }
 
 }
 </script>

@@ -4,6 +4,9 @@ $font-content: 'Orbitron', sans-serif;
 .top {
 
     //  padding: 0px !important;
+    .movie-slide{
+        margin-right: -30px;
+    }
     .top-movies {
 
         .top-movies__text {
@@ -161,6 +164,7 @@ $font-content: 'Orbitron', sans-serif;
                 justify-content: space-between;
 
                 .icon-like {
+                    margin-left: 2px;
                     .fa {
                         color: #ec7532;
                     }

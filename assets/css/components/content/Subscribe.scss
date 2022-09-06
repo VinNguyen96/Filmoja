@@ -1,0 +1,43 @@
+$text-White: white; //màu chữ slider-content
+$font-content: 'Orbitron', sans-serif;
+$text-ec7532: #ec7532;
+ .content-Subscribe{
+    position: relative;
+    margin-top: 50px;
+    z-index: 1;
+    background: #f9f9f9 none repeat scroll 0 0;
+    top: 0;
+    left: 0;
+    padding: 70px 0;
+    .content-text{
+        z-index: 2;
+        text-align: center;
+
+        h6{
+            color: $text-ec7532;
+        }
+
+        h1{
+            color: $text-White;
+
+        }
+
+        .content-btn{
+            display: flex;
+            justify-content: center;
+            width: 70%;
+            height: 40px;
+        }
+    }
+ }
+
+.content-Subscribe::after {
+    position: absolute;
+    left: 0;
+    content: "";
+    width: 100%;
+    top: 0;
+    height: 100%;
+    background: url(@/assets/images/bgs1.jpg) no-repeat scroll 0 0/cover;
+    z-index: -1;
+}
