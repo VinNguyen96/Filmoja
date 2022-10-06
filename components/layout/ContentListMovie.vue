@@ -13,15 +13,12 @@
     <ListMovieItem :list="listMovie"></ListMovieItem>
   </div>
 
-
   <!-- </div> -->
   <!-- </div> -->
 </template>
 
 <script>
 import ListMovieItem from "@/components/movies/ListMovies.vue";
-
-
 
 export default {
   name: "ListMovie",
@@ -30,12 +27,8 @@ export default {
     ListMovieItem,
   },
 
-
-
   data() {
     return {
-
-
       listMovie: [],
       //   {
       //     img: require("../../assets/images/top-slider-1.jpeg"),
@@ -101,26 +94,21 @@ export default {
       //     evaluate: "4.5",
       //   },
 
-
       // ],
     };
   },
 
-  mounted(){
+  mounted() {
     this.fetchSomething();
   },
 
   methods: {
     async fetchSomething() {
-      const ip = await this.$axios.$get('https://netflix-weekly-top-10.p.rapidapi.com/api/othermovie')
-      this.listMovie = ip
-    }
-
-    
-  }
-
+      const ip = await this.$axios.$get(
+        "https://netflix-weekly-top-10.p.rapidapi.com/api/othermovie"
+      );
+      this.listMovie = ip;
+    },
+  },
 };
-
-
-
 </script>

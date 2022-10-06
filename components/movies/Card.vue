@@ -2,7 +2,7 @@
   <div class="slider-top">
     <div class="wrap-top">
       <div class="top-img">
-        <img :src="item.img" alt="" />
+        <img :src="getImgUrl" alt="" @error="onError" />
       </div>
 
       <div class="watch-video">
@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="content-top">
-      <nuxt-link :to= url>
+      <nuxt-link :to="url">
         <p>{{ item.name }}</p>
       </nuxt-link>
 
@@ -35,6 +35,7 @@
 </template>
 
 <script>
+
 export default {
   name: "MovieCard",
 
@@ -46,10 +47,18 @@ export default {
   },
 
   computed: {
-
     url() {
-      return `detailMovie/${this.item.list}`
-    }
+      return `movie/${this.item.list}`;
+    },
+    getImgUrl() {
+      return this.item.img || ''
+    },
+  },
+
+  methods: {
+    onError(e) {
+      e.target.src = require('@/assets/images/default-img.jpeg')
+    },
   }
 };
 </script>

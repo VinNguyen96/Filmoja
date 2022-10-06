@@ -10,11 +10,9 @@
 
     <ContentWatch></ContentWatch>
 
-    <ListMovie></ListMovie>
+    <ListMovieItem :list="listMovie"></ListMovieItem>
 
     <Subscribe></Subscribe>
-
-   
   </div>
 </template>
 
@@ -25,8 +23,8 @@ import { defaultMutations } from "@/constant/store";
 import Slider from "@/components/layout/Slider.vue";
 import topMovie from "@/components/layout/ContentTopMovie.vue";
 import ContentWatch from "@/components/layout/ContentWatch.vue";
-import ListMovie from "@/components/layout/ContentListMovie.vue";
 import Subscribe from "@/components/layout/content/Subscribe.vue";
+import ListMovieItem from "@/components/movies/ListMovies.vue";
 
 export default {
   name: "IndexPage",
@@ -37,15 +35,22 @@ export default {
     Slider,
     topMovie,
     ContentWatch,
-    ListMovie,
     Subscribe,
+    ListMovieItem,
   },
 
-
- 
+  data() {
+    return {
+      listMovie: [],
+    };
+  },
 
   computed: {
     ...mapGetters({ getCounter: "getCounter", janwdkjanw: "user/getUser" }),
+  },
+
+  async mounted() {
+    await this.initData();
   },
 
   methods: {
@@ -55,10 +60,31 @@ export default {
 
     ...mapActions({
       fetchCounter: "fetchCounter",
+      getListMovie: 'movies/getListMovie'
     }),
 
     abc() {
       this.$store.commit(defaultMutations.INCREMENT);
+    },
+
+    async initData() {
+      await this.getListMovieFromStore();
+    },
+
+    async getListMovieFromStore() {
+      const movies = await this.getListMovie()
+
+      const result = movies.map((item) => {
+        return {
+          lists: item.list,
+          title: item.name,
+          hours: item.hoursviewed,
+        };
+      });
+
+      console.log(result);
+
+      this.listMovie = movies;
     },
   },
 };
