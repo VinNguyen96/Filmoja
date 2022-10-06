@@ -13,6 +13,8 @@
     <ListMovie></ListMovie>
 
     <Subscribe></Subscribe>
+
+   
   </div>
 </template>
 
@@ -38,6 +40,9 @@ export default {
     ListMovie,
     Subscribe,
   },
+
+
+ 
 
   computed: {
     ...mapGetters({ getCounter: "getCounter", janwdkjanw: "user/getUser" }),

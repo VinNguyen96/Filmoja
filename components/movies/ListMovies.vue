@@ -9,8 +9,8 @@
                 <div>CARTOONS</div>
             </div>
             <div class="row list-movie">
-                <div class="col-lg-3" v-for="(item, index) in list" :key="'listmove' + index" :item = "item">
-                    <MovieCard :item = "item"></MovieCard>
+                <div class="col-lg-3" v-for="(item, index) in list" :key="'listmove' + index" >
+                    <MovieCard :item = item ></MovieCard>
                 </div>
             </div>
         </div>

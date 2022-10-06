@@ -26,10 +26,10 @@ export const actions = {
     commit(defaultMutations.SET_COUNTER, res.data);
     return res.data;
   },
-
-  nuxtServerInit({ commit }, { req }) {
-    if (req.session.user) {
-      commit("user", req.session.user);
-    }
-  },
-};
+}
+//   nuxtServerInit({ commit }, { req }) {
+//   //   if (req.session.user) {
+//   //     commit("user", req.session.user);
+//   //   }
+//   // },
+// };

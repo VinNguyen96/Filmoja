@@ -19,19 +19,19 @@ export default {
       },
 
       {
-        rel:'stylesheet',
-        type:'text/css',
+        rel: 'stylesheet',
+        type: 'text/css',
         href: '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css',
       },
 
       {
-        type:'text/javascript',
+        type: 'text/javascript',
         href: '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js',
       },
 
       {
-        rel:'stylesheet',
-        href:'https://fonts.googleapis.com/css?family=Orbitron',
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Orbitron',
       },
     ]
   },
@@ -56,7 +56,19 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
+    '@nuxtjs/axios'
+
   ],
+
+  axios: {
+    headers:{
+    common: {
+      
+      'X-RapidAPI-Key': 'f8524faad2mshb422cb183985533p11ea5ejsn51054c708620',
+      'X-RapidAPI-Host': 'netflix-weekly-top-10.p.rapidapi.com'
+    },
+  },
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="content-top">
-      <nuxt-link to="#">
+      <nuxt-link :to= url>
         <p>{{ item.name }}</p>
       </nuxt-link>
 
@@ -44,5 +44,12 @@ export default {
       default: () => {},
     },
   },
+
+  computed: {
+
+    url() {
+      return `detailMovie/${this.item.list}`
+    }
+  }
 };
 </script>
