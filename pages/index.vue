@@ -8,6 +8,16 @@
 
     <topMovie></topMovie>
 
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/yTj9Owe40do"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+
     <ContentWatch></ContentWatch>
 
     <ListMovieItem :list="listMovie"></ListMovieItem>
@@ -19,6 +29,7 @@
 <script>
 import { mapGetters, mapMutations, mapActions } from "vuex";
 import { defaultMutations } from "@/constant/store";
+import GlobalData from "@/mixins/GlobalData";
 
 import Slider from "@/components/layout/Slider.vue";
 import topMovie from "@/components/layout/ContentTopMovie.vue";
@@ -30,6 +41,7 @@ export default {
   name: "IndexPage",
 
   layout: "default",
+  mixins: [GlobalData],
 
   components: {
     Slider,
@@ -42,6 +54,7 @@ export default {
   data() {
     return {
       listMovie: [],
+      isCase1: false,
     };
   },
 
@@ -60,7 +73,7 @@ export default {
 
     ...mapActions({
       fetchCounter: "fetchCounter",
-      getListMovie: 'movies/getListMovie'
+      getListMovie: "movies/getListMovie",
     }),
 
     abc() {
@@ -72,7 +85,7 @@ export default {
     },
 
     async getListMovieFromStore() {
-      const movies = await this.getListMovie()
+      const movies = await this.getListMovie();
 
       const result = movies.map((item) => {
         return {

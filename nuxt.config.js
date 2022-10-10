@@ -43,6 +43,9 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    // mixins
+    {src: '@/mixins/Global'},
+    {src: '@/mixins/GlobalData'},
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -63,7 +66,7 @@ export default {
   axios: {
     headers:{
     common: {
-      
+
       'X-RapidAPI-Key': 'f8524faad2mshb422cb183985533p11ea5ejsn51054c708620',
       'X-RapidAPI-Host': 'netflix-weekly-top-10.p.rapidapi.com'
     },
