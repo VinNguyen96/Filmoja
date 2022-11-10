@@ -2,11 +2,13 @@
   <div>
     <!-- <Header></Header> -->
 
-    
+
 
     <!-- <button @click="abc">counter {{ getCounter }}</button> -->
 
     <Slider></Slider>
+
+    <p>ka whda djaij</p>
 
     <topMovie></topMovie>
 
