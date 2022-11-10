@@ -2,7 +2,7 @@
   <div>
     <!-- <Header></Header> -->
 
-    <button @click="abc">counter {{ getCounter }}</button>
+    <!-- <button @click="abc">counter {{ getCounter }}</button> -->
 
     <Slider></Slider>
 
