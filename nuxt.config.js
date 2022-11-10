@@ -61,16 +61,17 @@ export default {
   ],
 
   axios: {
-    headers:{
-    common: {
-      
-      'X-RapidAPI-Key': 'f8524faad2mshb422cb183985533p11ea5ejsn51054c708620',
-      'X-RapidAPI-Host': 'netflix-weekly-top-10.p.rapidapi.com'
+    headers: {
+      common: {
+
+        'X-RapidAPI-Key': 'f8524faad2mshb422cb183985533p11ea5ejsn51054c708620',
+        'X-RapidAPI-Host': 'netflix-weekly-top-10.p.rapidapi.com'
+      },
     },
-  },
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    publicPath: 'public/',
   }
 }
