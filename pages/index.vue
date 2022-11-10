@@ -8,7 +8,6 @@
 
     <Slider></Slider>
 
-    <p>ka whda djaij</p>
 
     <topMovie></topMovie>
 
